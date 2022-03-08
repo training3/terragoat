@@ -9,6 +9,8 @@ jobs:
     steps:
     - name: Run Bridgecrew 
       id: Bridgecrew
+      directory: "terraform/"
+      log_level: DEBUG
       uses: bridgecrewio/bridgecrew-action@master
       with:
         api-key: ${{ secrets.BRIDGECREW_API_KEY }}
